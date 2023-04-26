@@ -1,14 +1,10 @@
 ﻿
-namespace Xadrez_console.Tabuleiro
+namespace Xadrez_console.tabuleiro
 {
     enum Cor
     {
         Branca,
         Preta,
-        Amarela,
-        Azul,
-        Vermelha,
-        Verde,
-        Laranja
+        Amarela
     }
 }
