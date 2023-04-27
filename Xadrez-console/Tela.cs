@@ -8,6 +8,7 @@ namespace Xadrez_console
         {
             for (int i = 0; i < tab.Linhas; i++)
             {
+                Console.Write(8 - i + " ");
                 for (int j = 0; j < tab.Colunas; j++)
                 {
                     if (tab.Peca(i, j) == null)
@@ -16,10 +17,27 @@ namespace Xadrez_console
                     }
                     else
                     {
-                        Console.Write($"{tab.Peca(i, j)} ");
+                        ImprimirPeca(tab.Peca(i, j));
+                        Console.Write(" ");
                     }
                 }
                 Console.WriteLine();
+            }
+            Console.WriteLine("  a b c d e f g h");
+        }
+
+        public static void ImprimirPeca(Peca peca)
+        {
+            if (peca.Cor == Cor.Branca) // se a peça é branca eu imprimo ela normal 
+            {
+                Console.Write(peca);
+            }
+            else
+            {
+                ConsoleColor aux = Console.ForegroundColor; // se não eu crio uma var do tipo ConsoleColor só pra armazenar o valor original
+                Console.ForegroundColor = ConsoleColor.Yellow; // dela defino uma nova cor para a letra e depois retorno ela para a cor original
+                Console.Write(peca);
+                Console.ForegroundColor = aux;
             }
         }
     }
