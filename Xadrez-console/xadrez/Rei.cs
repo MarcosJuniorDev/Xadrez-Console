@@ -56,7 +56,7 @@ namespace Xadrez_console.xadrez
                 mat[pos.Linha, pos.Coluna] = true;
             }
             //SW
-            pos.DefinirValores(Posicao.Linha - 1, Posicao.Coluna - 1);
+            pos.DefinirValores(Posicao.Linha + 1, Posicao.Coluna - 1);
             if (Tab.PosicaoValida(pos) && PodeMover(pos))
             {
                 mat[pos.Linha, pos.Coluna] = true;
