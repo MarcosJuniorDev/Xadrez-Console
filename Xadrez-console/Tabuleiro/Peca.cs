@@ -20,6 +20,10 @@ namespace Xadrez_console.tabuleiro
         {
             QteMovimentos++;
         }
+        public void DecrementarQteMovimento()
+        {
+            QteMovimentos--;
+        }
 
         public bool ExisteMovimentosPossiveis() //Vai olhar na matriz de MovimentosPossiveis() se tem pelo menos algum valor verdadeiro
         {
